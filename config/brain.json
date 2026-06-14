@@ -1,0 +1,11 @@
+{
+    "current_emotion": "Neutra",
+    "emotion_intensity": 0.7,
+    "last_comment_time": null,
+    "last_interaction_time": null,
+    "user_profile": {
+        "name": "",
+        "tone": "humorístico",
+        "interests": []
+    }
+}

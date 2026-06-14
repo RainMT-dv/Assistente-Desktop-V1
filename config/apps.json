@@ -1,0 +1,10 @@
+{
+    "_comment": "Configure os caminhos dos aplicativos que você deseja abrir por voz. Use o caminho completo do executável.",
+    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "firefox": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+    "notepad": "notepad.exe",
+    "explorer": "explorer.exe",
+    "steam": "C:\\Program Files (x86)\\Steam\\steam.exe",
+    "discord": "C:\\Users\\SEU_USUARIO\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe",
+    "spotify": "C:\\Users\\SEU_USUARIO\\AppData\\Roaming\\Spotify\\Spotify.exe"
+}

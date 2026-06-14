@@ -1,0 +1,48 @@
+{
+    "_comment": "Copie este arquivo para emotion_profiles.json e ajuste os valores conforme preferir.",
+    "Feliz": {
+        "edge_tts": {"rate": "+15%", "pitch": "+3Hz", "volume": "+5%"},
+        "azure_style": "cheerful",
+        "avatar_blendshape": "Sorriso"
+    },
+    "Surpresa": {
+        "edge_tts": {"rate": "+30%", "pitch": "+5Hz", "volume": "+10%"},
+        "azure_style": "cheerful",
+        "avatar_blendshape": "Surpresa"
+    },
+    "Triste": {
+        "edge_tts": {"rate": "-20%", "pitch": "-5Hz", "volume": "-10%"},
+        "azure_style": "sad",
+        "avatar_blendshape": "Triste"
+    },
+    "Raiva": {
+        "edge_tts": {"rate": "+20%", "pitch": "+3Hz", "volume": "+15%"},
+        "azure_style": "angry",
+        "avatar_blendshape": "Bravo"
+    },
+    "Curiosa": {
+        "edge_tts": {"rate": "-10%", "pitch": "-3Hz", "volume": "+0%"},
+        "azure_style": null,
+        "avatar_blendshape": "Curiosa"
+    },
+    "Séria": {
+        "edge_tts": {"rate": "-5%", "pitch": "-8Hz", "volume": "+5%"},
+        "azure_style": "serious",
+        "avatar_blendshape": "Séria"
+    },
+    "Assustada": {
+        "edge_tts": {"rate": "+50%", "pitch": "+10Hz", "volume": "+20%"},
+        "azure_style": "fearful",
+        "avatar_blendshape": "Assustada"
+    },
+    "Sussurro": {
+        "edge_tts": {"rate": "-15%", "pitch": "-2Hz", "volume": "-30%"},
+        "azure_style": "whispering",
+        "avatar_blendshape": "Sussurro"
+    },
+    "Neutra": {
+        "edge_tts": {"rate": "+0%", "pitch": "+0Hz", "volume": "+0%"},
+        "azure_style": null,
+        "avatar_blendshape": "Neutra"
+    }
+}

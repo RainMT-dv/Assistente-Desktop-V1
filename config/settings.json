@@ -1,0 +1,22 @@
+{
+    "tts": {
+        "engine": "edge-tts",
+        "voice": "pt-BR-FranciscaNeural",
+        "azure_speech_key": "",
+        "azure_speech_region": "brazilsouth"
+    },
+    "llm": {
+        "provider": "openrouter",
+        "openrouter_api_key": "COLOQUE_SUA_API_KEY_AQUI",
+        "openrouter_model": "google/gemma-3-27b-it",
+        "max_history_messages": 6,
+        "think_mode": false
+    },
+    "paths": {
+        "apps_db": "config/apps.json",
+        "brain_db": "config/brain.json",
+        "emotion_profiles": "config/emotion_profiles.json",
+        "slang_dictionary": "config/slang_dictionary.json",
+        "audio_output_dir": "audio_output"
+    }
+}
