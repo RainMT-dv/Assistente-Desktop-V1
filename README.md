@@ -2,14 +2,14 @@
 
 A versão inicial do assistente de texto + voz via terminal. Conversa com uma LLM (OpenRouter), detecta emoções na resposta e sintetiza a fala via Edge-TTS.
 
-> **Nota:** Esta é a V1 — versão texto puro via terminal. Para a versão completa com dashboard web, voz ativa, memória persistente e muito mais, veja a [V2](https://github.com/RainMT-dv/Assistente-Pessoal-Desktop-Proativo-e-Multimodal).
+> **Nota:** Esta é a V1 — Para a versão completa com dashboard web (bem simples), voz ativa, memória persistente (simples), veja a [V2](https://github.com/RainMT-dv/Assistente-Pessoal-Desktop-Proativo-e-Multimodal).
 
 ---
 
 ## ✨ Funcionalidades
 
 - 💬 **Chat via terminal** com histórico de conversa
-- 🎭 **Sistema de emoções** — a IA responde com tags `[Feliz]`, `[Triste]`, `[Raiva]`...
+- 🎭 **Sistema de emoções** — a IA responde com tags `[Feliz]`, `[Triste]`, `[Raiva]`... (não é muito bom)
 - 🔊 **Síntese de voz** com `edge-tts` (gratuito, sem API extra)
 - 🚀 **Abertura de apps por comando** — `/abrir chrome`, `/abrir discord`...
 - 🎤 Personalidade informal em Português Brasileiro
@@ -103,4 +103,4 @@ Edite `config/apps.json` com os caminhos dos executáveis na **sua** máquina:
 
 ## 📄 Licença
 
-MIT — use, modifique e distribua livremente.
+MIT — use, modifique e distribua livremente!!!
