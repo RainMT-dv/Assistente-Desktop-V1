@@ -1,106 +1,112 @@
-# 🤖 Assistente Pessoal Desktop — V1
+<div align="center">
 
-A versão inicial do assistente de texto + voz via terminal. Conversa com uma LLM (OpenRouter), detecta emoções na resposta e sintetiza a fala via Edge-TTS.
+  # Assistente Desktop V1
+  *Assistente de IA via terminal com voz e abertura de aplicativos*
 
-> **Nota:** Esta é a V1 — Para a versão completa com dashboard web (bem simples), voz ativa, memória persistente (simples), veja a [V2](https://github.com/RainMT-dv/Assistente-Pessoal-Desktop-Proativo-e-Multimodal).
+  [![Python](https://img.shields.io/badge/Python-3.10+-3776ab?style=flat-square)](https://python.org)
+  [![OpenRouter](https://img.shields.io/badge/LLM-OpenRouter-7c3aed?style=flat-square)](https://openrouter.ai)
+  [![Edge TTS](https://img.shields.io/badge/TTS-edge--tts-blue?style=flat-square)](https://github.com/rany2/edge-tts)
+  [![Licença](https://img.shields.io/badge/licença-MIT-blue?style=flat-square)](LICENSE)
 
----
+  [Funcionalidades](#funcionalidades) • [Primeiros passos](#primeiros-passos) • [Comandos](#comandos)
 
-## ✨ Funcionalidades
-
-- 💬 **Chat via terminal** com histórico de conversa
-- 🎭 **Sistema de emoções** — a IA responde com tags `[Feliz]`, `[Triste]`, `[Raiva]`... (não é muito bom)
-- 🔊 **Síntese de voz** com `edge-tts` (gratuito, sem API extra)
-- 🚀 **Abertura de apps por comando** — `/abrir chrome`, `/abrir discord`...
-- 🎤 Personalidade informal em Português Brasileiro
+</div>
 
 ---
 
-## 🛠️ Pré-requisitos
+> [!NOTE]
+> Esta é a V1 — simples e funcional. Para a versão com dashboard web, voz ativa e memória persistente, veja a [V2](https://github.com/RainMT-dv/Assistente-Desktop-V2).
 
-- **Python 3.10+** — [python.org](https://python.org) (marque "Add to PATH" na instalação)
-- **API Key do OpenRouter** (gratuita) — [openrouter.ai](https://openrouter.ai)
+Assistente de texto e voz via terminal. Conversa com uma LLM via OpenRouter, detecta emoções na resposta e sintetiza a fala com Edge TTS — tudo sem custo de API de voz.
+
+## Funcionalidades
+
+- **Chat via terminal** com histórico de conversa
+- **Sistema de emoções** — a IA responde com tags `[Feliz]`, `[Triste]`, `[Raiva]`...
+- **Síntese de voz** com `edge-tts` (gratuito, sem API extra)
+- **Abertura de apps por comando** — `/abrir chrome`, `/abrir discord`...
+- Personalidade informal em Português Brasileiro
+
+## Primeiros passos
+
+### Requisitos
+
+- Python 3.10+ — marque "Add to PATH" na instalação
+- API Key do OpenRouter (gratuita) — [openrouter.ai](https://openrouter.ai)
 - Conexão com internet
 
----
+### Instalação
 
-## 📦 Instalação
+**1. Clone o repositório**
 
-### 1. Clone o repositório
 ```bash
-git clone https://github.com/RainMT-dv/Assistente-Pessoal-Desktop-Proativo-e-Multimodal.git
-cd Assistente-Pessoal-Desktop-Proativo-e-Multimodal
+git clone https://github.com/RainMT-dv/Assistente-Desktop-V1.git
+cd Assistente-Desktop-V1
 ```
 
-### 2. Instale as dependências
-Dê dois cliques em **`SETUP.bat`** — ele cria o ambiente virtual e instala tudo automaticamente.
+**2. Instale as dependências**
 
-### 3. Configure sua API Key
-Edite `config/settings.json` e substitua `COLOQUE_SUA_API_KEY_AQUI` pela sua chave do OpenRouter:
+Dê dois cliques em `SETUP.bat` — ele cria o ambiente virtual e instala tudo automaticamente.
+
+**3. Configure sua API Key**
+
+Edite `config/settings.json` e substitua o placeholder pela sua chave do OpenRouter:
+
 ```json
 "openrouter_api_key": "sk-or-v1-..."
 ```
 
----
+**4. Configure os apps (opcional)**
 
-## 🏃 Como executar
+Edite `config/apps.json` com os caminhos dos executáveis na sua máquina:
 
-Dê dois cliques em **`RUN.bat`** ou rode no terminal:
+```json
+{
+  "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "discord": "C:\\Users\\SEU_USUARIO\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe"
+}
+```
+
+## Como executar
+
+Dê dois cliques em `RUN.bat` ou rode no terminal:
+
 ```bash
 venv\Scripts\activate
 python main.py
 ```
 
----
-
-## 💬 Comandos disponíveis
+## Comandos
 
 | Comando | Descrição |
 |---|---|
-| `/apps` | Lista os apps configurados |
-| `/abrir <app>` | Abre um aplicativo |
+| `/abrir <app>` | Abre um aplicativo configurado |
+| `/apps` | Lista os apps disponíveis |
 | `/emocoes` | Lista as emoções disponíveis |
 | `/testarvoz` | Testa todas as emoções em áudio |
 | `/limpar` | Limpa o histórico de conversa |
 | `/ajuda` | Mostra a lista de comandos |
 | `/sair` | Encerra o programa |
 
----
-
-## 📂 Estrutura
+## Estrutura
 
 ```
 ├── config/
 │   ├── settings.json          # Configurações (API key, modelo, TTS)
-│   ├── apps.json              # Caminhos dos apps para abrir por voz
-│   ├── brain.json             # Estado emocional atual da IA
+│   ├── apps.json              # Caminhos dos apps
+│   ├── brain.json             # Estado emocional da IA
 │   ├── emotion_profiles.json  # Perfis de voz por emoção
 │   └── slang_dictionary.json  # Gírias e expressões
 ├── core/
-│   ├── chat_manager.py        # Comunicação com a LLM (OpenRouter)
-│   ├── tts_engine.py          # Síntese de voz (edge-tts)
+│   ├── chat_manager.py        # Comunicação com a LLM
+│   ├── tts_engine.py          # Síntese de voz
 │   ├── emotion_parser.py      # Parser de tags de emoção
 │   └── app_launcher.py        # Abertura de aplicativos
-├── main.py                    # Ponto de entrada
-├── SETUP.bat                  # Instalação automatizada
-└── RUN.bat                    # Execução automatizada
+├── main.py
+├── SETUP.bat
+└── RUN.bat
 ```
 
----
+## Contribuindo
 
-## 🔑 Configurando Apps
-
-Edite `config/apps.json` com os caminhos dos executáveis na **sua** máquina:
-
-```json
-{
-    "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-    "discord": "C:\\Users\\SEU_USUARIO\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe"
-}
-```
-
----
-
-## 📄 Licença
-
-MIT — use, modifique e distribua livremente!!!
+Sinta-se à vontade para modificar e melhorar! Crie um fork e publique as suas mudanças.
